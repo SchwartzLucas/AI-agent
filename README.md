@@ -11,24 +11,33 @@ Sua decisão de movimento é baseada apenas na percepção atual, isto é, na po
 
 Nesta etapa, o ambiente é um grid vazio, sem obstáculos.
 
-### PEAS:
+### PEAS do agente:
 
-P - performance:
+P - Performance:
 - Visitar todos os quatro cantos do grid (obrigatório)
 - Não sair dos limites do grid [9][9], [0][9], [9][0], [0][0]
 - Não ficar preso em loop infinito
 - Minimizar número de passos (desejável)
 - Completar tarefa de forma autônoma
 
-Métrica principal: Todos cantos visitados = SUCESSO
+E - Environment:
+- Grid 10x10
+- Ambiente estático
+- Sem nenhum obstáculo
 
-Métrica secundária: Passos totais (menor = melhor)
+A - Actuators:
+- moverCima()
+- moverBaixo()
+- moverEsquerda()
+- moverDireita()
 
+S - Sensors:
+- marcarCantoVisitado(x,y)
 
 
 ## Stage 2 - Agente Reativo Baseado em Modelo
 
-### Peas do agente:
+### PEAS do agente:
 
 P - Performance:
 - Visitar os quatro cantos do grid
@@ -52,3 +61,22 @@ S - Sensors:
 - verificarSePodeMover(x, y)
 - verificarSeEstaEmCanto(x, y)
 - verificarCasasAdjacentes()
+
+## Stage 3 - Agente baseado em objetivo
+
+### PEAS do agente:
+
+P - Performance:
+
+
+
+
+E - Environment:
+
+
+
+A - Actuators:
+
+
+
+S- Sensors:

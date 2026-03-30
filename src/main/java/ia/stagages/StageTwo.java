@@ -10,18 +10,27 @@ public class StageTwo {
         int contadorDemovimentos = 0;
 
         // Obstáculos estáticos de exemplo
-        obstaculo[3][3] = true;
-        obstaculo[3][4] = true;
-        obstaculo[4][4] = true;
-        obstaculo[6][2] = true;
-        obstaculo[5][2] = true;
-        obstaculo[6][3] = true;
-        obstaculo[6][4] = true;
-        obstaculo[6][5] = true;
-        obstaculo[5][5] = true;
-        obstaculo[5][4] = true;
+        obstaculo[0][4] = true;
+        obstaculo[1][0] = true;
+        obstaculo[1][3] = true;
+        obstaculo[2][2] = true;
+        obstaculo[3][2] = true;
+        obstaculo[3][5] = true;
+        obstaculo[4][1] = true;
+        obstaculo[4][6] = true;
         obstaculo[5][3] = true;
-        obstaculo[5][2] = true;
+        obstaculo[5][5] = true;
+        obstaculo[5][6] = true;
+        obstaculo[5][7] = true;
+        obstaculo[5][8] = true;
+        obstaculo[6][5] = true;
+        obstaculo[6][8] = true;
+        obstaculo[7][5] = true;
+        obstaculo[7][8] = true;
+        obstaculo[8][5] = true;
+        obstaculo[8][7] = true;
+        obstaculo[8][8] = true;
+        obstaculo[9][5] = true;
 
         int x = 9;
         int y = 9;

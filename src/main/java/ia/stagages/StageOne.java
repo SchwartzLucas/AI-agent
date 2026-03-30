@@ -3,13 +3,14 @@ package ia.stagages;
 import java.util.Scanner;
 
 public class StageOne {
+    static final int TAM = 10;
     private static boolean visitou00 = false;
     private static boolean visitou09 = false;
     private static boolean visitou90 = false;
     private static boolean visitou99 = false;
 
     public static void main(String[] args) {
-        String[][] grid = new String[10][10];
+        String[][] grid = new String[TAM][TAM];
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("x inicial (0-9): ");

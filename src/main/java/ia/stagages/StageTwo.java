@@ -7,12 +7,21 @@ public class StageTwo {
         String[][] grid = new String[TAM][TAM];
         boolean[][] visitado = new boolean[TAM][TAM];
         boolean[][] obstaculo = new boolean[TAM][TAM];
+        int contadorDemovimentos = 0;
 
         // Obstáculos estáticos de exemplo
         obstaculo[3][3] = true;
         obstaculo[3][4] = true;
         obstaculo[4][4] = true;
         obstaculo[6][2] = true;
+        obstaculo[5][2] = true;
+        obstaculo[6][3] = true;
+        obstaculo[6][4] = true;
+        obstaculo[6][5] = true;
+        obstaculo[5][5] = true;
+        obstaculo[5][4] = true;
+        obstaculo[5][3] = true;
+        obstaculo[5][2] = true;
 
         int x = 9;
         int y = 9;
@@ -27,6 +36,7 @@ public class StageTwo {
 
             if (prox == null) {
                 System.out.println("Sem movimentos possíveis. Encerrando.");
+                System.out.println("Ambiente percorrido em: "+ contadorDemovimentos + " movimentos");
                 break;
             }
 
@@ -34,6 +44,7 @@ public class StageTwo {
             y = prox[1];
 
             Thread.sleep(300);
+            contadorDemovimentos++;
         }
     }
 
@@ -44,7 +55,6 @@ public class StageTwo {
                 {0, 1},  // direita
                 {1, 0}   // baixo
         };
-
         for (int[] dir : direcoes) {
             int nx = x + dir[0];
             int ny = y + dir[1];

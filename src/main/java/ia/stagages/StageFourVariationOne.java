@@ -2,7 +2,7 @@ package ia.stagages;
 
 import java.util.*;
 
-public class StageFour {
+public class StageFourVariationOne {
 
     static final int TAM = 10;
 
@@ -47,13 +47,22 @@ public class StageFour {
         }
 
         // amarelo (custo 2)
-        custo[2][2] = 2; custo[2][3] = 2; custo[3][2] = 2;
-        custo[3][7] = 2; custo[4][7] = 2;
+        custo[2][2] = 2;
+        custo[2][3] = 2;
+        custo[3][2] = 2;
+        custo[3][7] = 2;
+        custo[4][7] = 2;
 
         // vermelho (custo 3)
-        custo[1][5] = 3; custo[2][5] = 3; custo[2][6] = 3;
-        custo[3][5] = 3; custo[3][6] = 3; custo[4][5] = 3;
-        custo[5][5] = 3; custo[2][4] = 3; custo[3][4] = 3;
+        custo[1][5] = 3;
+        custo[2][5] = 3;
+        custo[2][6] = 3;
+        custo[3][5] = 3;
+        custo[3][6] = 3;
+        custo[4][5] = 3;
+        custo[5][5] = 3;
+        custo[2][4] = 3;
+        custo[3][4] = 3;
         custo[4][4] = 3;
 
         // obstáculos

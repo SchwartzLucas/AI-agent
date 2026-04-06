@@ -1,7 +1,10 @@
 package ia.stagages;
 
+import java.util.Scanner;
+
 public class StageTwo {
     static final int TAM = 10;
+    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws InterruptedException {
         String[][] grid = new String[TAM][TAM];
@@ -32,8 +35,11 @@ public class StageTwo {
         obstaculo[8][8] = true;
         obstaculo[9][5] = true;
 
-        int x = 9;
-        int y = 9;
+        System.out.print("x inicial (0-" + (TAM - 1) + "): ");
+        int x = Integer.parseInt(scanner.next());
+
+        System.out.print("y inicial (0-" + (TAM - 1) + "): ");
+        int y = Integer.parseInt(scanner.next());
 
         while (true) {
             visitado[x][y] = true;

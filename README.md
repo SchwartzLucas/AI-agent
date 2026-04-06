@@ -13,25 +13,25 @@ Nesta etapa, o ambiente é um grid vazio, sem obstáculos.
 
 ### PEAS do agente:
 
-P - Performance:
+P - Performance (Desempenho):
 - Visitar todos os quatro cantos do grid (obrigatório)
 - Não sair dos limites do grid [9][9], [0][9], [9][0], [0][0]
 - Não ficar preso em loop infinito
 - Minimizar número de passos (desejável)
 - Completar tarefa de forma autônoma
 
-E - Environment:
+E - Environment (Ambiente):
 - Grid 10x10
 - Ambiente estático
 - Sem nenhum obstáculo
 
-A - Actuators:
+A - Actuators (Atuadores):
 - moverCima()
 - moverBaixo()
 - moverEsquerda()
 - moverDireita()
 
-S - Sensors:
+S - Sensors (Sensores):
 - marcarCantoVisitado(x,y)
 
 
@@ -39,24 +39,24 @@ S - Sensors:
 
 ### PEAS do agente:
 
-P - Performance:
+P - Performance (Desempenho):
 - Visitar os quatro cantos do grid
 - Minimizar número de passos
 - Não sair dos limites
 - Evitar loops desnecessários
 
-E - Environment:
+E - Environment (Ambiente):
 - Grid 10x10
 - Ambiente estático
 - Sem obstáculos móveis
 
-A - Actuators:
+A - Actuators (Atuadores):
 - moverCima()
 - moverBaixo()
 - moverEsquerda()
 - moverDireita()
 
-S - Sensors:
+S - Sensors (Sensores):
 - lerPosicaoAtual()
 - verificarSePodeMover(x, y)
 - verificarSeEstaEmCanto(x, y)
@@ -97,3 +97,40 @@ S – Sensors (Sensores)
 -	Identificação da posição objetivo
 -	Mapeamento das células visitadas (controle interno)
 -	Exploração das posições vizinhas durante a busca (BFS)
+
+
+## Stage 4 - Agente baseado em Utilizade
+
+### PEAS do agente:
+
+P – Performance (Desempenho)
+- Custo total do caminho (soma dos custos das células percorridas) - PRIMÁRIA
+- Número de células visitadas (menor é melhor como secundária)
+- Tempo de execução do algoritmo (eficiência computacional)
+
+
+E – Environment (Ambiente)
+- Grid MxN com custos de entrada em cada célula (terrenos diferentes)
+- Ponto de partida fixo: [startX][startY]
+- Ponto de destino fixo: [destX][destY]
+- Células com custos: {1, 2, 3}
+- Variação 1: Completamente observável (todos os custos conhecidos)
+- Variação 2: Parcialmente observável (custos revelados na exploração)
+
+
+A – Actuators (Atuadores)
+- Mover para células adjacentes (cima, baixo, esquerda, direita)
+- Registrar estado interno (células visitadas, custos conhecidos)
+- Calcular e atualizar custo acumulado do caminho atual
+
+S – Sensors (Sensores)
+- Variação 1 (Observável):
+- Custo de entrada de TODAS as células do grid
+- Posição atual do agente
+- Posição do destino
+
+Variação 2 (Parcialmente observável):
+- Custo da célula atual
+- Custo das células adjacentes (percepção local)
+- Posição atual do agente
+- Posição do destino (conhecida)

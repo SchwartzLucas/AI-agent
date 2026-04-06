@@ -89,8 +89,7 @@ public class StageFour {
     }
 
 
-    public static List<int[]> aStar(int startX, int startY, int goalX, int goalY,
-                                    int[][] custo, boolean[][] obstaculo) {
+    public static List<int[]> aStar(int startX, int startY, int goalX, int goalY, int[][] custo, boolean[][] obstaculo) {
 
         PriorityQueue<Node> open = new PriorityQueue<>(Comparator.comparingInt(Node::f));
         boolean[][] fechado = new boolean[TAM][TAM];

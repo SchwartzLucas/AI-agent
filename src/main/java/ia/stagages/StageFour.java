@@ -53,7 +53,8 @@ public class StageFour {
         // vermelho (custo 3)
         custo[1][5] = 3; custo[2][5] = 3; custo[2][6] = 3;
         custo[3][5] = 3; custo[3][6] = 3; custo[4][5] = 3;
-        custo[5][5] = 3;
+        custo[5][5] = 3; custo[2][4] = 3; custo[3][4] = 3;
+        custo[4][4] = 3;
 
         // obstáculos
         obstaculo[5][5] = false;

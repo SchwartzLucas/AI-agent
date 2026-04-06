@@ -66,17 +66,34 @@ S - Sensors:
 
 ### PEAS do agente:
 
-P - Performance:
+P – Performance (Desempenho)
+-	Encontrar o menor caminho válido entre a posição inicial e a posição objetivo
+-	Alcançar o objetivo de forma correta e completa
+-	Evitar colisões com obstáculos
+-	Não sair dos limites do grid
+-	Não revisitar estados desnecessariamente (evitar loops)
+-	Minimizar o número de movimentos realizados
+-	Encerrar corretamente caso não exista caminho possível
+
+E – Environment (Ambiente)
+-	Grid 10x10
+-	Ambiente estático e totalmente observável
+-	Presença de obstáculos fixos (imutáveis)
+-	Posição inicial e posição objetivo definidas pelo usuário
+-	Ambiente discreto (movimentos em células)
+-	Ambiente determinístico (mesma ação → mesmo resultado)
 
 
+A – Actuators (Atuadores)
+-	moverCima()
+-	moverBaixo()
+-	moverEsquerda()
+-	moverDireita()
 
-
-E - Environment:
-
-
-
-A - Actuators:
-
-
-
-S- Sensors:
+S – Sensors (Sensores)
+-	Leitura da posição atual (x, y)
+-	Verificação de células válidas dentro do grid
+-	Detecção de obstáculos nas posições adjacentes
+-	Identificação da posição objetivo
+-	Mapeamento das células visitadas (controle interno)
+-	Exploração das posições vizinhas durante a busca (BFS)
